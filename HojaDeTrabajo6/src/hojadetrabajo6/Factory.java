@@ -13,7 +13,7 @@ import java.util.*;
  */
 public class Factory {
     
-    public Map getImplementacion(int tipo){ //Tipo de la interfaz
+    public static Map getImplementacion(int tipo){ //Tipo de la interfaz
         if(tipo==1){          
             System.out.println("Ha utilizado Hashmap");
             return new HashMap();            
@@ -28,5 +28,6 @@ public class Factory {
             System.out.println("Ha utilizado LinkedHashMap");
             return new LinkedHashMap();            
         }        
-    }
+    }    
+    
 }

@@ -11,6 +11,14 @@ import java.io.FileReader;
 
 public class Calculos {
     
+    public Calculos(){}
+    
+    public Calculos(int decision) {
+        
+        Factory.getImplementacion(decision);        
+    }
+    
+    
     public String leerArchivo(String cadena) {
                         
         File f;
