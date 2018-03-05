@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package hojadetrabajo6;
+import java.util.*;
 
 /**
  *
@@ -12,19 +13,20 @@ package hojadetrabajo6;
  */
 public class Factory {
     
-    public String getImplementacion(String forma){ //Tipo de la interfaz
-        if(forma.equals("1")){
+    public Map getImplementacion(int tipo){ //Tipo de la interfaz
+        if(tipo==1){          
             System.out.println("Ha utilizado Hashmap");
-            
+            return new HashMap();            
         }
-        else if(forma.equals("2")){
+        
+        else if(tipo==2){
             System.out.println("Ha utilizado TreeMap");
-           
+            return new TreeMap();            
         }
-        else if(forma.equals("3")){
+        
+        else {
             System.out.println("Ha utilizado LinkedHashMap");
-            
-        }
-        return null;
+            return new LinkedHashMap();            
+        }        
     }
 }

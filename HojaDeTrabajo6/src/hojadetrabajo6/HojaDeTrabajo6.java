@@ -5,12 +5,19 @@
  */
 package hojadetrabajo6;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Usuario
  */
 public class HojaDeTrabajo6 {
 
+    Calculos calculo = new Calculos();
+    String postFix = calculo.leerArchivo("./card_desc.txt");
+    
+    ArrayList<Cartas> listaCartas = new ArrayList<Cartas>();       
+    
     /**
      * @param args the command line arguments
      */
