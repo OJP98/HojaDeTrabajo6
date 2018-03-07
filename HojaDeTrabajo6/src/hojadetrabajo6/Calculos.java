@@ -8,8 +8,11 @@ package hojadetrabajo6;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.util.ArrayList;
 
 public class Calculos {
+    
+    ArrayList<Cartas> listaCartas = new ArrayList<Cartas>(); 
     
     public Calculos(){}
     
@@ -26,6 +29,10 @@ public class Calculos {
         BufferedReader br;
 
         String postFix = "";
+        int pos;
+        String nombre="";
+        String tipo="";
+        int largo;
 
        //Este bloque de codigo tiene como objetivo leer la cadena de texto que
        //el usuario haya establecido previamente
@@ -38,7 +45,13 @@ public class Calculos {
             String linea;
 
             while( (linea = br.readLine()) != null) {
+                largo = linea.length();
                 postFix += linea;
+                pos = linea.indexOf("|");
+                nombre = linea.substring(0,pos);
+                tipo = linea.substring(pos+1,largo);
+                Cartas temporal = new Cartas(nombre,tipo);  
+                listaCartas.add(temporal);
             }                                            
             
             br.close();

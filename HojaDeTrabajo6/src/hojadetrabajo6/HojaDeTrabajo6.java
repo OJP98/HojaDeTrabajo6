@@ -22,7 +22,7 @@ public class HojaDeTrabajo6 {
         Calculos calculo = new Calculos();
         String postFix = calculo.leerArchivo("./card_desc.txt");
 
-        ArrayList<Cartas> listaCartas = new ArrayList<Cartas>();  
+            
 
         Scanner teclado = new Scanner(System.in);
 
