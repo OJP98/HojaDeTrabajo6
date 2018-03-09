@@ -187,6 +187,34 @@ public class Calculos {
        
         return lista;
     }
+    public String imprimirTipolista(){
+        String lista = "";
+        String monstruos="";
+        String hechizos="";
+        String trampas="";
+        String tipo = "";
+        String nombre = "";
+        Iterator it = listaCartas.entrySet().iterator(); 
+        while(it.hasNext()){
+            Map.Entry e = (Map.Entry)it.next();
+            nombre = (String) e.getKey();
+            tipo = (String) e.getValue();
+            if (tipo.equals("Monstruo")) {
+                    
+                    monstruos += tipo+ " | "+nombre+ "\n";
+                    
+                } else if (tipo.equals("Hechizo")) {
+                    
+                    hechizos += tipo+ " | "+nombre+ "\n";                    
+                    
+                } else if (tipo.equals("Trampa")) {
+                    
+                    trampas += tipo+ " | "+nombre+ "\n";
+                }      
+        }
+        lista = monstruos + hechizos + trampas;
+        return lista;
+    }
     
     public void imprimirTodas(){
         
@@ -199,4 +227,13 @@ public class Calculos {
             
         }        
     }
+    public void imprimirLista(){
+        for (Map.Entry<String, String> i :  listaCartas.entrySet()) {
+            
+            String key = i.getKey();
+            String value = i.getValue();
+            
+            System.out.println(key + " | " + value);
+    }
+}
 }

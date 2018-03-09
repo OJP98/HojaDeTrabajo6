@@ -73,7 +73,7 @@ public class HojaDeTrabajo6 {
         Calculos calculos = new Calculos(implementacion);   
         calculos.leerArchivo("./cards_desc.txt");
         
-        calculos.imprimirTodas();
+       // calculos.imprimirTodas();
         
         while (power) {
             
@@ -128,11 +128,12 @@ public class HojaDeTrabajo6 {
                 
             } else if (decision==5) {
                 
-                //Tu codigo
+               calculos.imprimirTodas();
                 
             } else if (decision==6) {
                 
-                //Tu codigo
+               String resultado = calculos.imprimirTipolista();
+               System.out.println(resultado);
                 
             } else if (decision==7) {
                 
