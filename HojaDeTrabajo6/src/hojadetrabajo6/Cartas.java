@@ -34,6 +34,15 @@ public class Cartas {
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
+
+    @Override
+    public String toString() {
+        return nombre + " | " + tipo;
+    }
+    
+    public String porTipo(){
+        return tipo + " | " + nombre;
+    }
     
     
 }

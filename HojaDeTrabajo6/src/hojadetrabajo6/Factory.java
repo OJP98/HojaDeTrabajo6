@@ -11,22 +11,22 @@ import java.util.*;
  * @author Oscar Juarez - 17315
  * @author Andres Urizar - 17632
  */
-public class Factory {
+public class Factory {        
     
     public static Map getImplementacion(int tipo){ //Tipo de la interfaz
         if(tipo==1){          
             System.out.println("Ha utilizado Hashmap");
-            return new HashMap();            
+            return new HashMap<String, String>();            
         }
         
         else if(tipo==2){
             System.out.println("Ha utilizado TreeMap");
-            return new TreeMap();            
+            return new TreeMap<String, String>();            
         }
         
         else {
             System.out.println("Ha utilizado LinkedHashMap");
-            return new LinkedHashMap();            
+            return new LinkedHashMap<String, String>();            
         }        
     }    
     
