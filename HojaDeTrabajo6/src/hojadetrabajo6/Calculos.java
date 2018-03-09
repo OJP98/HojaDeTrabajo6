@@ -37,6 +37,7 @@ public class Calculos {
         String nombre="";
         String tipo="";
         int largo;        
+        int cont = 0;
         
        //Este bloque de codigo tiene como objetivo leer la cadena de texto que
        //el usuario haya establecido previamente
@@ -48,7 +49,9 @@ public class Calculos {
             
             String linea;
 
-            while( (linea = br.readLine()) != null) {                                
+            while( ((linea = br.readLine()) != null) ) {       
+                
+                cont++;
                 
                 largo = linea.length();
                 postFix += linea;
@@ -60,8 +63,12 @@ public class Calculos {
                 MapCartas.put(nombre, tipo);
                 listaCartas.put(nombre, tipo);
                 
-            }                                            
-            
+//                Activar linea solo si se quiere medir la complejidad del metodo
+//                if (cont>6999) break;
+                                
+            }                           
+                       
+//            System.out.println(cont);
             br.close();
             fr.close();                        
 
@@ -254,8 +261,8 @@ public class Calculos {
      * Imprimie todas las cartas existentes en forma de lista.
      */
     public void imprimirTodas(){
-        
-        for (Map.Entry<String, String> i :  listaCartas.entrySet()) {
+                        
+        for (Map.Entry<String, String> i :  MapCartas.entrySet()) {
             
             String key = i.getKey();
             String value = i.getValue();
