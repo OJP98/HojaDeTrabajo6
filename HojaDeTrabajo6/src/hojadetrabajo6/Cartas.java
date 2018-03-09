@@ -1,15 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Objeto tipo carta
+ * Algoritmos y estructuras de datos - seccion 10.
+ * @author: Oscar Juarez - 17315
+ * @author: Andres Urizar - 17632
+ * @version: 9/03/18
  */
 package hojadetrabajo6;
 
-/**
- *
- * @author Oscar Juarez - 17315
- * @author Andres Urizar - 17632
- */
 public class Cartas {
     private String nombre;
     private String tipo;
@@ -40,6 +37,10 @@ public class Cartas {
         return nombre + " | " + tipo;
     }
     
+    /**
+     * Imprime las cortas por tipo.
+     * @return: El string de las cartas
+     */
     public String porTipo(){
         return tipo + " | " + nombre;
     }

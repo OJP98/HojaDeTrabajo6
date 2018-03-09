@@ -1,7 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Clase que implementa la funcionalidad del programa
+ * Algoritmos y estructuras de datos - seccion 10.
+ * @author: Oscar Juarez - 17315
+ * @author: Andres Urizar - 17632
+ * @version: 9/03/18
  */
 package hojadetrabajo6;
 
@@ -13,8 +15,7 @@ import java.util.*;
 public class Calculos {
         
     Map<String, String> MapCartas;
-    HashMap<String, String> listaCartas = new HashMap();
-    ArrayList<Cartas> mazoUsuario = new ArrayList<Cartas>();        
+    HashMap<String, String> listaCartas = new HashMap();         
     
     public Calculos(int decision) {
         
@@ -22,6 +23,10 @@ public class Calculos {
               
     }
        
+    /**
+     * Metodo que lee el archivo de texto.
+     * @param archivo: La direccion del archivo.
+     */
     public void leerArchivo(String archivo) {
                         
         File f;
@@ -70,6 +75,12 @@ public class Calculos {
         }                             
     }
     
+    /**
+     * Agrega una carta al mazo del usuario.
+     * @param nombre: El nombre de la carta a agregar.
+     * @param mazo: El mazo del ususario.
+     * @return: el mazo del usuario con la carta agregada.
+     */
     public ArrayList<Cartas> agregarCarta(String nombre, ArrayList<Cartas> mazo){   
         
         boolean encontrado = false;
@@ -101,6 +112,11 @@ public class Calculos {
         
     }    
     
+    /**
+     * Muestra el tipo de carta que el usuario especifique.
+     * @param nombre: El nombre de la carta.
+     * @retur: El tipo de carta.
+     */
     public String mostrarTipo(String nombre) {
         
         boolean encontrado = false;
@@ -129,6 +145,11 @@ public class Calculos {
         return tipo;
     }
     
+    /**
+     * Imprime las cartas actuales que posee el usuario.
+     * @param mazo: La lista de cartas que posee el usuario.
+     * @return: El string de las cartas.
+     */
     public String mostrarMazo(ArrayList<Cartas> mazo) {
                 
         String lista="";
@@ -152,6 +173,11 @@ public class Calculos {
         
     }
     
+    /**
+     * Imprime el mazo de las cartas que posee el usuario por tipo.
+     * @param mazo: La lista tipo cartas del usuario.
+     * @return: El string de las cartasa ordenadas por tipo.
+     */
     public String imprimirPorTipo(ArrayList<Cartas> mazo){
         
         String lista="";
@@ -187,6 +213,11 @@ public class Calculos {
        
         return lista;
     }
+    
+    /**
+     * Orden todas las cartas existentes por tipo.
+     * @return: string de la lista de cartas.
+     */
     public String imprimirTipolista(){
         String lista = "";
         String monstruos="";
@@ -195,10 +226,13 @@ public class Calculos {
         String tipo = "";
         String nombre = "";
         Iterator it = listaCartas.entrySet().iterator(); 
+        
         while(it.hasNext()){
+            
             Map.Entry e = (Map.Entry)it.next();
             nombre = (String) e.getKey();
             tipo = (String) e.getValue();
+            
             if (tipo.equals("Monstruo")) {
                     
                     monstruos += tipo+ " | "+nombre+ "\n";
@@ -216,6 +250,9 @@ public class Calculos {
         return lista;
     }
     
+    /**
+     * Imprimie todas las cartas existentes en forma de lista.
+     */
     public void imprimirTodas(){
         
         for (Map.Entry<String, String> i :  listaCartas.entrySet()) {
@@ -227,13 +264,5 @@ public class Calculos {
             
         }        
     }
-    public void imprimirLista(){
-        for (Map.Entry<String, String> i :  listaCartas.entrySet()) {
-            
-            String key = i.getKey();
-            String value = i.getValue();
-            
-            System.out.println(key + " | " + value);
-    }
-}
+
 }

@@ -1,16 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Clase principal con la que  el usuario interactua.
+ * Algoritmos y estructuras de datos - seccion 10.
+ * @author: Oscar Juarez - 17315
+ * @author: Andres Urizar - 17632
+ * @version: 9/03/18
  */
 package hojadetrabajo6;
 
 import java.util.*;
 
-/**
- *
- * @author Usuario
- */
 public class HojaDeTrabajo6 { 
     
     /**
@@ -72,8 +70,7 @@ public class HojaDeTrabajo6 {
         
         Calculos calculos = new Calculos(implementacion);   
         calculos.leerArchivo("./cards_desc.txt");
-        
-       // calculos.imprimirTodas();
+              
         
         while (power) {
             
@@ -101,14 +98,16 @@ public class HojaDeTrabajo6 {
             if (decision==1) {
                 
                 System.out.print("Ingrese el nombre de la carta que desea agregar: ");
-                nombre = teclado.next().toString();
+                nombre = teclado.nextLine();
+                nombre = teclado.nextLine();
                 mazo = calculos.agregarCarta(nombre, mazo);
                 
                                 
             } else if (decision==2) {
                 
                 System.out.print("Ingrese el nombre de la carta a mostrar: ");
-                nombre = teclado.next().toString();
+                nombre = teclado.nextLine();
+                nombre = teclado.nextLine();
                 String tipo = calculos.mostrarTipo(nombre);
                 System.out.println("\nLa carta es de tipo: " + tipo);
                 

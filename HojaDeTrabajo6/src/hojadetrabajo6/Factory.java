@@ -1,16 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Clase factory que devuelve la implementacion que desea usar el usuario.
+ * Algoritmos y estructuras de datos - seccion 10.
+ * @author: Oscar Juarez - 17315
+ * @author: Andres Urizar - 17632
+ * @version: 9/03/18
  */
 package hojadetrabajo6;
 import java.util.*;
 
-/**
- *
- * @author Oscar Juarez - 17315
- * @author Andres Urizar - 17632
- */
 public class Factory {        
     
     public static Map getImplementacion(int tipo){ //Tipo de la interfaz
